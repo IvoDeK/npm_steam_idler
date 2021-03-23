@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/IvoDeK/npm_steam_idler/issues"
   },
-  "homepage": "https://github.com/IvoDeK/npm_steam_idler#readme"
+  "homepage": "https://github.com/IvoDeK/npm_steam_idler#readme",
+  "dependencies": {
+    "steam-user": "^4.19.3"
+  }
 }
