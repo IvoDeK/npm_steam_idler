@@ -29,9 +29,10 @@ function LoginUser(sUser, accountName, password) {
         rememberPassword: true,
         promptSteamGuardCode: true
     });
+
     sUser.on('error', err => {
         return undefined;
-    })
+    });
 }
 
 function Idle(sUser, accountName, password, gameids) {
@@ -60,17 +61,6 @@ module.exports.setAccount = function({username, password, gameids}) {
     users[username] = new user(username, password, gameids);
     users[username].LogIn();
     return console.log(`\x1b[5m\x1b[30m\x1b[42m✓\x1b[0m \x1b[32mAdded ${username}'s account!\x1b[0m`);
-}
-
-/**
- *
- * @param {string} username - Put a steam username here
- *
- */
-
-module.exports.logIn = function(username) {
-    if (users[username]) return users[username].LogIn();
-    return console.log(`\x1b[5m\x1b[30m\x1b[41m✗\x1b[0m \x1b[31mNo account could be found.\x1b[0m`);
 }
 
 /**
