@@ -53,7 +53,7 @@ function Idle(sUser, accountName, password, gameids) {
  *
  */
 
-module.exports.setAccount = function({username, password, gameids}) {
+module.exports.setAccount = function(username, password, gameids) {
     if (!username || typeof username !== "string") return console.log(`\x1b[5m\x1b[30m\x1b[41m✗\x1b[0m \x1b[31mInvalid username.\x1b[0m`);
     if (!password || typeof password !== "string") return console.log(`\x1b[5m\x1b[30m\x1b[41m✗\x1b[0m \x1b[31mInvalid password.\x1b[0m`);
     if (!gameids || gameids.find(id => typeof id !== "number")) return console.log(`\x1b[5m\x1b[30m\x1b[41m✗\x1b[0m \x1b[31mInvalid gameids.\x1b[0m`);
